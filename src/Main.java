@@ -53,6 +53,13 @@ public class Main {
     }
 
     public static void linearSearch(double[] arr, double key){
+        //linear search:    Starts at the beginning of a data set, then iterate through each element until the desired element is found.
+        //                  Must include a case for when the desired element is not found.
+        //                  Becomes more inefficient linearly as the data set grows larger.
+
+        //      runtime complexity: Linear Time O(n)
+        //      small data set: good
+        //      large data set: inefficient
         int searchNum = 0;
         for(int i = 0; i < arr.length; i++ ){
             if(arr[i] == key){
@@ -67,6 +74,13 @@ public class Main {
     }
 
     public static void binarySearch(double[] arr, double key){
+        //binary search:    Generally used in already sorted arrays. Cuts data set in half for each 'loop'
+        //                  Starts at the middle and compares both subarrays. If key is < than the middle, next 'loop' will be
+        //                  in the first subarray. otherwise it will be the second subarray
+        //
+        //      runtime complexity: Logarithmic Time O(logn)
+        //      small data set: good
+        //      large data set: good
         int low, mid, high;
         low = 0;
         high = arr.length - 1;
